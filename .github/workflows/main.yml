@@ -24,8 +24,7 @@ jobs:
           release_name: Release ${{ steps.package-version.outputs.current-version }}
           body: |
             Changes in this Release
-            - First Change
-            - Second Change
+            ${{github.event.head_commit.message}}
           draft: false
           prerelease: false
   
